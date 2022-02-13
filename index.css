@@ -1,0 +1,132 @@
+:root {
+	--Cyan: hsl(179, 62%, 43%);
+	--Yellow: hsl(71, 73%, 54%);
+	--Grey: hsl(204, 43%, 93%);
+	--Blue: hsl(218, 22%, 67%);
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-size: inherit;
+	text-decoration: none;
+}
+
+body {
+	background-color: var(--Grey);
+}
+
+section .container {
+	display: block;
+	margin: 2rem 1.4rem;
+	max-width: 600px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border-radius: 8px;
+}
+
+section .left-container {
+	background-color: white;
+	border-radius: 8px 8px 0 0;
+}
+
+section .left-container .subtitle {
+	color: var(--Yellow);
+	margin-bottom: 1.2rem;
+}
+
+section .left-container .description {
+	color: var(--Blue);
+}
+
+section .right-container {
+	color: var(--Grey);
+}
+
+section .right-container .block-1 {
+	background-color: var(--Cyan);
+	border-radius: 0;
+}
+
+section .right-container .block-1 .price {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-right: .8rem;
+}
+
+section .right-container .block-1 .description {
+	margin-top: .5rem;
+	margin-bottom: 1.8rem;
+}
+
+section .right-container .block-1 .button {
+	background-color: var(--Yellow);
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	font-weight: 700;
+	color: var(--Grey);
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+section .right-container .block-2 {
+	background-color: var(--Cyan);
+	opacity: .8;
+	border-radius: 0 0 8px 8px;
+}
+
+.title {
+	font-size: 1.2rem;
+	margin-bottom: 1.5rem;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex .align-center {
+	align-items: center;
+}
+
+.join {
+	color: var(--Cyan);
+}
+
+.sub {
+	color: var(--Grey);
+	opacity: .8;
+}
+
+.padding-set {
+	padding: 1.8rem;
+}
+footer {
+	text-align: center;
+	width: 95%;
+}
+.block-2 p{
+  padding: 2px;
+}
+
+@media (min-width: 768px) {
+	section {
+		display: grid;
+		place-items: center;
+		min-height: 100vh;
+	}
+	section .right-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	section .right-container .block-1 {
+		border-radius: 0 0 0 8px;
+	}
+	section .right-container .block-2 {
+		border-radius: 0 0 8px 0;
+	}
+}
